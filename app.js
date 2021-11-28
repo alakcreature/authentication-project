@@ -42,7 +42,7 @@ let users = [];
 
 // Routes
 app.get('/', isAuthenticated, (req, res) => {
-    res.render('index.ejs', { name: "Shubham" })
+    res.render('index.ejs', { name: req.user.name })
 })
 
 app.get('/login', isNotAuthenticated,(req, res) => {
